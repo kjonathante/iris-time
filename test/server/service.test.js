@@ -2,7 +2,8 @@
 
 require("should");
 const request = require("supertest");
-const service = require("../../server/service");
+const config = require("../../config");
+const service = require("../../server/service")(config);
 
 describe("The express service", () => {
   describe("GET /foo", () => {
